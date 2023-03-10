@@ -2,7 +2,7 @@
 A Python projects which monitor the serial port connected to a computer (Windows) and visually display.
 
 # Summary
-At present, all features of the original version are developed and designed for Ms. Li's（CUMT） needs, and all of the features are available under the developer's（Yeah，only me just temporary）license. Of course, we also support the learning use and modification of this code, and hope that a more perfect version can be released. Thank you to everyone who has seen this software.
+At present, all features of the original version are developed and designed for Li Jia Qi's（CUMT） needs, and all of the features are available under the developer's（Yeah，only me just temporary）license. Of course, we also support the learning use and modification of this code, and hope that a more perfect version can be released. Thank you to everyone who has seen this software.
 
 # About Code
 ## Now Progress
