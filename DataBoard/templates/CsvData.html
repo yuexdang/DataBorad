@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>数据面板</title>
+
+
+    <!-- core dependcies css -->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+
+    <!-- button css -->
+    <link rel="stylesheet" href="static/css/dataTables.bootstrap4.min.css">
+
+    <!-- core css -->
+    <link href="static/css/themify-icons.css" rel="stylesheet">
+    <link href="static/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="static/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app header-info">
+        <div class="layout">
+            <!-- 顶导 -->
+            <div class="header navbar">
+                <div class="header-container">
+                    <div class="nav-logo">
+                        <a href="/">
+
+                            <div class="logo logo-white" style="background-image: url('static/image/logo-white.png')"></div>
+                        </a>
+                    </div>
+                    <ul class="nav-left">
+                        <li>
+                            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="m-r-10">
+                            <a class="quick-view-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-format-indent-decrease"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 顶导 -->
+
+            <!-- 左侧贴边导航栏 -->
+            <div class="side-nav expand-lg">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu scrollable">
+                        <li class="side-nav-header">
+                            <span>导航</span>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-gauge"></i>
+                                </span>
+                                <span class="title">数据看板</span>
+                                <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/">全局看板</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-image-filter-drama"></i>
+                                </span>
+                                <span class="title">数据详情</span>
+                                <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/RouteCheck">路由监控</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/">数据记录</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧贴边导航栏 -->
+
+            <!-- 页面内容块 -->
+            <div class="page-container">
+                <!-- 右侧导航栏 -->
+                <div class="quick-view">
+                    <ul class="quick-view-tabs nav nav-tabs nav-justified" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#UI-config" role="tab" data-toggle="tab">
+                                <span>UI调整</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#TOOL-config" role="tab" data-toggle="tab">
+                                <span>记录设置</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content scrollable">
+                        <!-- UI调整模块 -->
+                        <div id="UI-config" role="tabpanel" class="tab-pane fade in active">
+                            <div class="theme-configurator p-20">
+                                <div class="m-v-20 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">纯色配色</p>
+                                    <p class="m-b-15">页面UI采用纯色配色</p>
+                                    <div class="theme-selector p-b-20">
+                                        <label>
+                                            <input type="radio" value="default" name="header-theme">
+                                            <span class="theme-color bg-white border"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="primary" name="header-theme">
+                                            <span class="theme-color bg-primary"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="info" name="header-theme">
+                                            <span class="theme-color bg-info"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="success" name="header-theme">
+                                            <span class="theme-color bg-success"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="warning" name="header-theme">
+                                            <span class="theme-color bg-warning"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="danger" name="header-theme">
+                                            <span class="theme-color bg-danger"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="dark" name="header-theme">
+                                            <span class="theme-color bg-dark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="m-v-15 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">渐变配色</p>
+                                    <p class="m-b-15">页面UI采用渐变色配色</p>
+                                    <div class="theme-selector p-b-15">
+                                        <label>
+                                            <input type="radio" value="primary-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-primary"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="info-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-info"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="success-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-success"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="warning-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-warning"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="danger-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-danger"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="m-v-15 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">导航背景</p>
+                                    <p class="m-b-15">左侧导航栏背景颜色</p>
+                                    <div class="theme-selector p-b-15">
+                                        <label>
+                                            <input type="radio" value="default" name="side-nav-color">
+                                            <span class="theme-color bg-white border"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="dark" name="side-nav-color">
+                                            <span class="theme-color bg-dark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- UI调整模块 -->
+
+                        <!-- 数据记录设置 -->
+                        <div id="TOOL-config" role="tabpanel" class="tab-pane fade">
+                            <div class="theme-configurator p-20">
+                                <div class="m-v-20 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">数据记录操作</p>
+                                    <p class="m-b-15">调整全局配置</p>
+                                    <div class="form-group">
+                                        <div class="switch d-inline m-r-10">
+                                            <input type="checkbox" id="switch-1">
+                                            <label for="switch-1"></label>
+                                        </div>
+                                        <label>数据保存至CSV文件</label>
+                                    </div>
+                                </div>
+
+                                <div class="m-v-15 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">数据存储</p>
+                                    <p class="m-b-15">设置数据存储位置</p>
+                                    <div class="p-b-15">
+                                        <p> 文件夹路径 </p>
+                                        <div class="input-group">
+                                            <input type="text" id="file-1" class="form-control" value="{{FileInfo[0]}}" placeholder="{{FileInfo[0]}}">
+                                            <span class="input-group-append">
+                                                    <button class="btn btn-default" id="RenameURL">更改</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="p-b-15">
+                                        <p> 文件名称 </p>
+                                        <div class="input-group">
+                                            <input type="text" id="file-2" class="form-control" value="{{FileInfo[1]}}" placeholder="{{FileInfo[1]}}">
+                                            <span class="input-group-append">
+                                                <button class="btn btn-default" id="RenameFile">更改</button>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 数据记录设置 -->
+                    </div>
+                </div>
+            <!-- 右侧导航栏  -->
+
+            <!-- 中心内容块 -->
+            <div class="main-content">
+                <div class="container-fluid">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-overflow">
+                                <table id="dt-opt" class="table table-hover table-xl">
+                                    <thead>
+                                        <tr>
+                                            {% for t in title %}
+                                            <th>{{t}}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for data in csvDatas %}
+                                        <tr>
+                                            {% for d in data %}
+                                            <td>{{d}}</td>
+                                            {% endfor %}
+                                        </tr>
+
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SaveSwitch" class="hidden-button">{{SaveSwitch}}</div>
+            </div>
+
+
+
+            <!-- 中心内容块 -->
+
+            <!-- 底部 -->
+            <footer class="content-footer">
+                <div class="footer">
+                    <div class="copyright text-center text-gray">
+                        串口数据实时显示V1.0
+                    </div>
+                </div>
+            </footer>
+            <!-- 底部 -->
+
+        </div>
+        <!-- 页面内容块 -->
+
+    </div>
+    </div>
+
+    <script src="static/js/vendor.js"></script>
+
+    <script src="static/js/app.min.js"></script>
+
+    <!-- 页面Js -->
+    <script type="text/javascript" src="static/js/sheetneed.js"></script>
+
+    <!-- 表单内容Js -->
+    <script src="static/js/jquery.dataTables.js"></script>
+    <script src="static/js/dataTables.bootstrap4.min.js"></script>
+    <script src="static/js/data-table.js"></script>
+</body>
+
+</html>
