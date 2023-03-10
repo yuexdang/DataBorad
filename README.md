@@ -7,7 +7,8 @@ At present, all features of the original version are developed and designed for 
 # About Code
 ## Now Progress
 
-Release 1.0
+**Release 1.0**
+
 At present, this program is mainly used to record and display the digital data received from the serial port, adopted Flask and Pyecharts to built the application.I tried to improve the stability of the program, but something was still missing **such as**：
 - Hot swap of serial port devices.
 - The incoming data is non-numeric.
@@ -15,8 +16,10 @@ At present, this program is mainly used to record and display the digital data r
 - Request fluctuation when just started.
 - Disorder of timing（ Sporadically ）.
 - etc...
+
 As you can see, the current program is still a very unstable program, I hope that someone can continue to develop, together to complete a fucking special serial port reception and display program.
 On how to use it, just run app.py (with the required library installed beforehand, of course).
+
 **imports**
 - flask & flask_apscheduler
 - json
